@@ -4,8 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: blanchedalmond;
+        margin: 0;
+        padding: 20px;
+    }
+    .container{
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgb(100, 61, 92);
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgb(41, 41, 41);        
+    }
+    h1{
+        text-align: center;
+    }
+    table{
+        display: block;
+        margin: 10px 0 5px;
+        font-weight: bold;
+}
+input, textarea, select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type="submit"]{
+    background-color: rgb(77, 77, 77);
+    color: white;
+    border: none;
+    cursor: pointer;} 
+</style>
 </head>
 <body>
-    
+    <div class="container">
+        <h1>FORMULARIO DE CONTACTO</h1>
+        <form id="formulario" action="#" method="post"></form>
+            <label for="nombre"></label>
+            <input type="text" id="email" name="nombre">
+            <label for="email">correo electronico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="fecha_de_nacimiento">fecha_de_nacimiento:</label>
+            <input type="date" id="fecha_de_nacimiento" name="fecha_de_nacimiento" required>
+            <label for="telefono">movil:</label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" required>
+            <label for="mensaje">mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            <label for="pais">pais</label>
+            <select id="pais" name="pais" required>
+                <option value=" " disabled selected>selecciona tu pais</option>
+                <option value="es">españa</option>
+                <option value="co">colombia</option>
+                <option value="es">alemania</option>
+                <option value="es">honduras</option>
+            </select>
+            <input type="submit" name="enviar" id="enviar">
+            <br>
+            <br>
+            <button type="reset">enviar</button>
+            </form>
+    </div>
 </body>
 </html>
